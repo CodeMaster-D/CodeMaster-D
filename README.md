@@ -1,10 +1,10 @@
-# 💫 Profil Mister D ✨
+# Mr d
 
 <div align="center">
   
 
   
-  <h3>👨‍💻 Fullstack Developer | 💡 Innovator | 😊 Pemula yang Bersemangat</h3>
+  <h3>👨‍💻 Fullstack Developer | 💡 Innovator | 😊 Pemula </h3>
   
   [![Website](https://img.shields.io/badge/Portfolio-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://yourportfolio.com)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)

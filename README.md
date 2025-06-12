@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  ![Mister D Banner](https://i.imgur.com/7L0w5Gg.gif)
+
   
   <h3>👨‍💻 Fullstack Developer | 💡 Innovator | 😊 Pemula yang Bersemangat</h3>
   
@@ -49,16 +49,6 @@ const misterD = {
 **Laravel + React + Inertia.js**  
 Manajemen stok, penjualan, dan analitik lengkap  
 [![Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/your-repo)
-
-### 📱 Aplikasi Belanja Mobile
-**Flutter + Firebase**  
-E-commerce dengan AR preview produk  
-[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-green?style=for-the-badge)](https://demo.com)
-
-### 🤖 AI Content Generator
-**Python + React + OpenAI API**  
-Generator konten dengan GPT-4 dan DALL-E  
-[![Website](https://img.shields.io/badge/Web-Try_Now-blueviolet?style=for-the-badge)](https://ai-content-generator.com)
 
 ---
 
@@ -125,13 +115,9 @@ Generator konten dengan GPT-4 dan DALL-E
 ---
 
 <div align="center">
+
   
-  ![Coding GIF](https://i.imgur.com/x1KbC2A.gif)
-  
-  ### 💌 Mari Terhubung!
-  
-  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
-  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yourinvite)
+
   
   ⭐ Jangan lupa star repo saya jika Anda menyukainya!
   

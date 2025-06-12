@@ -43,29 +43,6 @@ const misterD = {
 
 ---
 
-## 🚀 Proyek Terbaru
-
-### 🔥 Sistem Inventory Premium
-**Laravel + React + Inertia.js**  
-Manajemen stok, penjualan, dan analitik lengkap  
-[![Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/your-repo)
-
----
-
-## 📊 Statistik GitHub
-
-<div align="center">
-  
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=djob-misael-m&show_icons=true&theme=radical&count_private=true)
-  
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=djob-misael-m&layout=compact&theme=nightowl)
-  
-  ![Contribution Snake](https://raw.githubusercontent.com/djob-misael-m/djob-misael-m/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
----
-
 ## 🛠️ Tech Stack Populer
 
 ### 🌐 Frontend

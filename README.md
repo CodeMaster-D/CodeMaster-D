@@ -15,7 +15,7 @@
 
 ---
 
-## 🌈 Tentang Saya
+##  Tentang Saya
 
 ```javascript
 const misterD = {

@@ -28,12 +28,7 @@ creative  : ["Figma", "Canva", "Lottie"]
 > - *Mister D (2025)*
 
 ---
-
-
 <div align="center">
-
-  
-
   
   ⭐ Jangan lupa star repo saya jika kamu menyukainya!
   

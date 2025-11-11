@@ -1,42 +1,77 @@
-# Nama Workflow yang akan muncul di tab "Actions"
 name: Generate Snake Animation
 
+
+
 on:
-  # Menjalankan setiap 12 jam
-  schedule:
-    - cron: "0 */12 * * *"
-  # Bisa dijalankan manual lewat GitHub Actions UI
-  workflow_dispatch:
+
+  # Menjalankan setiap 12 jam
+
+  schedule:
+
+    - cron: "0 */12 * * *"
+
+  # Bisa dijalankan manual lewat GitHub Actions UI
+
+  workflow_dispatch:
+
+
 
 jobs:
-  build:
-    name: Generate Snake 🐍
-    runs-on: ubuntu-latest
 
-    permissions:
-      contents: write  # perlu izin menulis ke repo
+  build:
 
-    steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    name: Generate Snake 🐍
 
-      # Step 2: Generate the snake SVG
-      - name: Generate Snake Animation
-        uses: Platane/snk@v3
-        with:
-          github_user_name: codemaster-d
-          outputs: |
-            # Ini adalah file utama yang akan kamu gunakan (Background HITAM)
-            dist/github-contribution-grid-snake.svg?palette=github-dark
-            # Ini adalah versi terang (opsional)
-            dist/github-contribution-grid-snake-light.svg?palette=github-light
+    runs-on: ubuntu-latest
 
-      # Step 3: Push hasil ke branch 'output'
-      - name: Push Snake Animation to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+    permissions:
+
+      contents: write  # perlu izin menulis ke repo
+
+
+
+    steps:
+
+      # Step 1: Checkout repository
+
+      - name: Checkout repository
+
+        uses: actions/checkout@v4
+
+
+
+      # Step 2: Generate the snake SVG
+
+      - name: Generate Snake Animation
+
+        uses: Platane/snk@v3
+
+        with:
+
+          github_user_name: codemaster-d
+
+          outputs: |
+
+            dist/github-contribution-grid-snake.svg
+
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+
+
+      # Step 3: Push hasil ke branch 'output'
+
+      - name: Push Snake Animation to output branch
+
+        uses: crazy-max/ghaction-github-pages@v4
+
+        with:
+
+          target_branch: output
+
+          build_dir: dist
+
+        env:
+
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

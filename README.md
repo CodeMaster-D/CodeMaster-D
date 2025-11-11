@@ -22,12 +22,6 @@ creative  : ["Figma", "Canva", "Lottie"]
 };
 
 ```
-## Kata Kata Hari Ini
-
-> "Kode terbaik yang pernah saya tulis adalah kode php karena lu bisa php lu dapat lambo"  
-> - *Mister D (2025)*
-
----
 <div align="center">
   
   ⭐ Jangan lupa star repo saya jika kamu menyukainya!

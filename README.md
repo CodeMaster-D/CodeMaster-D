@@ -21,6 +21,6 @@ creative  : ["Figma", "Canva", "Lottie"]
 
 ```
 <p align="center">
-  <img src="https://github.com/codemaster-d/codemaster-d/raw/output/dist/github-contribution-grid-snake.svg" alt="Ular Bergerak di Grid Kontribusi" />
+  <img src="https://raw.githubusercontent.com/codemaster-d/codemaster-d/output/dist/github-contribution-grid-snake.svg" alt="" />
 </p>
 

@@ -20,3 +20,6 @@ creative  : ["Figma", "Canva", "Lottie"]
 };
 
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codemaster-d/codemaster-d/output/dist/github-snake.svg" alt="GitHub Snake" />
+</p>

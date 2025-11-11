@@ -1,0 +1,39 @@
+# Nama Workflow yang akan muncul di tab "Actions" GitHub
+name: Generate Snake Animation
+
+# Tentukan kapan workflow ini harus berjalan
+on:
+  # Dijadwalkan untuk berjalan setiap 12 jam (cron schedule)
+  schedule:
+    - cron: "0 */12 * * *" 
+  # Mengizinkan menjalankan workflow secara manual dari GitHub UI
+  workflow_dispatch:
+
+# Konfigurasi pekerjaan (jobs)
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Langkah 1: Checkout kode repositori Anda
+      - uses: actions/checkout@v4
+      
+      # Langkah 2: Menjalankan GitHub Snake Action (Membuat Gambar Ular)
+      # PENTING: Action ini yang benar untuk ular!
+      - uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          # Pastikan username ini BENAR
+          github_user_name: codemaster-d
+          # Menentukan output gambar yang dibutuhkan (termasuk untuk grid kontribusi)
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg
+
+      # Langkah 3: Mengirim file gambar yang dihasilkan ke branch 'output'
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output # Branch tempat gambar disimpan
+          build_dir: dist # Folder tempat gambar dihasilkan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Token rahasia GitHub

@@ -6,8 +6,6 @@
 
 ---
 
-## Tentang Saya
-
 ```javascript
 const misterD = {
 pronouns  : "He" | "Him",
@@ -22,8 +20,3 @@ creative  : ["Figma", "Canva", "Lottie"]
 };
 
 ```
-<div align="center">
-  
-  ⭐ Jangan lupa star repo saya jika kamu menyukainya!
-  
-</div>

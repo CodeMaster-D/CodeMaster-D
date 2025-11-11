@@ -31,10 +31,10 @@ jobs:
             dist/github-snake-dark.svg?palette=github-dark
             dist/github-contribution-grid-snake.svg
 
-      # Langkah 3: Mengirim file gambar yang dihasilkan ke branch 'output'
+    # Langkah 3: Mengirim file gambar yang dihasilkan ke branch 'output'
       - uses: crazy-max/ghaction-github-pages@v4
         with:
-          target_branch: output 
-          build_dir: dist 
+          target_branch: output # Branch tempat gambar disimpan
+          build_dir: dist # Folder tempat gambar dihasilkan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

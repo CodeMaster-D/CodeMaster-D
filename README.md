@@ -14,9 +14,6 @@ code      : ["JavaScript", "PHP", "Python", "Java", "C#"],
 ml        : ["TensorFlow", "scikit-learn"],
 databases : ["MySQL", "MongoDB", "PostgreSQL"],
 devOps    : ["AWS", "Docker", "GitHub Actions"],
-creative  : ["Figma", "Canva", "Lottie"]
+design    : ["Figma", "Canva", "Lottie"]
 },
-  funFact: "Saya mulai coding saat berusia 8 tahun!"
-};
-
 ```

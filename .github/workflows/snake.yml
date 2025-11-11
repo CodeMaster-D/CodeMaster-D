@@ -2,39 +2,52 @@
 name: Generate Snake Animation
 
 on:
-  # Dijadwalkan untuk berjalan setiap 12 jam (cron schedule)
   schedule:
     - cron: "0 */12 * * *" 
-  # Mengizinkan menjalankan workflow secara manual dari GitHub UI
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    # === SOLUSI WAJIB: MENAMBAHKAN IZIN MENULIS (WRITE) ===
+    # IZIN WAJIB: Memungkinkan Workflow untuk MENULIS ke Repositori
     permissions:
       contents: write 
-    # =======================================================
       
     steps:
       # Langkah 1: Checkout kode repositori Anda
       - uses: actions/checkout@v4
       
-      # Langkah 2: Menjalankan GitHub Snake Action (Membuat Gambar Ular)
+      # Langkah 2: Menjalankan GitHub Snake Action (Membuat Gambar Ular di folder dist/)
       - uses: Platane/snk@v3
         id: snake-gif
         with:
           github_user_name: codemaster-d
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake.svg
+          # Kita fokus ke output grid kontribusi saja
+          outputs: dist/github-contribution-grid-snake.svg
 
-    # Langkah 3: Mengirim file gambar yang dihasilkan ke branch 'output'
-      - uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output # Branch tempat gambar disimpan
-          build_dir: dist # Folder tempat gambar dihasilkan
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # === LANGKAH 3: PUSH FILE MENGGUNAKAN PERINTAH GIT LANGSUNG (SOLUSI FAIL-PUSH) ===
+      - name: Deploy to output branch
+        run: |
+          # 1. Konfigurasi Git User untuk Commit
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          
+          # 2. Buat branch 'output' jika belum ada dan pindah ke sana
+          git branch -D output || true
+          git checkout --orphan output
+          
+          # 3. Hapus semua file lama di branch 'output' kecuali folder .git
+          git rm -rf .
+          
+          # 4. Salin file SVG yang sudah dibuat dari folder 'dist' ke root branch 'output'
+          cp dist/github-contribution-grid-snake.svg .
+          
+          # 5. Commit perubahan
+          git add github-contribution-grid-snake.svg
+          git commit -m "Generated Snake SVG"
+          
+          # 6. Push paksa ke branch 'output'
+          git push -f origin output
+          
+      # ==============================================================================

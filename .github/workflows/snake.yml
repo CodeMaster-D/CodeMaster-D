@@ -1,18 +1,39 @@
-            - name: snakemake
-  # You may pin to the exact commit or the version.
-  # uses: snakemake/snakemake-github-action@8fe6e990081faed87d6602454e1fe268a748b848
-  uses: snakemake/snakemake-github-action@v1.25.1
-  with:
-    # Working directory for the execution
-    directory: # default is .test
-    # Snakefile containing the workflow description
-    snakefile: # optional, default is Snakefile
-    # Additional Snakemake arguments to use
-    args: # optional, default is 
-    # Additional steps to prepare the workflow for execution
-    stagein: # optional, default is 
-    # Whether to run Snakemake or to generate a container image specification.
-    task: # optional, default is run
-    # 
-    show-disk-usage-on-error: # optional
-          
+# Nama Workflow yang akan muncul di tab "Actions" GitHub
+name: Generate Snake Animation
+
+# Tentukan kapan workflow ini harus berjalan
+on:
+  # Dijadwalkan untuk berjalan setiap 12 jam (cron schedule)
+  schedule:
+    - cron: "0 */12 * * *" 
+  # Mengizinkan menjalankan workflow secara manual dari GitHub UI
+  workflow_dispatch:
+
+# Konfigurasi pekerjaan (jobs)
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Langkah 1: Checkout kode repositori Anda
+      - uses: actions/checkout@v4
+      
+      # Langkah 2: Menjalankan GitHub Snake Action (Membuat Gambar Ular)
+      # PENTING: Action ini yang benar untuk ular!
+      - uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          # Pastikan username ini BENAR
+          github_user_name: codemaster-d
+          # Menentukan output gambar yang dibutuhkan (termasuk untuk grid kontribusi)
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg
+
+      # Langkah 3: Mengirim file gambar yang dihasilkan ke branch 'output'
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output # Branch tempat gambar disimpan
+          build_dir: dist # Folder tempat gambar dihasilkan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Token rahasia GitHub

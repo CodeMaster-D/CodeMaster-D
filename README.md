@@ -20,5 +20,5 @@ creative  : ["Figma", "Canva", "Lottie"]
 };
 
 ```
-<p align="center"> <img src="https://www.google.com/search?q=https://github.com/codemaster-d/codemaster-d/blob/output/dist/github-contribution-grid-snake.svg%3Fraw%3Dtrue%26v%3D43" alt="GitHub Snake Animation" /> </p>
+<p align="center"> <img src="https://www.google.com/search?q=https://github.com/codemaster-d/codemaster-d/blob/output/dist/github-contribution-grid-snake.svg%3Fraw%3Dtrue%26v%3D43" alt="" /> </p>
 

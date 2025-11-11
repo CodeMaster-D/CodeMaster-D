@@ -20,7 +20,5 @@ creative  : ["Figma", "Canva", "Lottie"]
 };
 
 ```
-<p align="center">
-  <img src="[https://raw.githubusercontent.com/codemaster-d/codemaster-d/output/dist/github-contribution-grid-snake.svg](https://raw.githubusercontent.com/codemaster-d/codemaster-d/output/dist/github-contribution-grid-snake.svg)" alt="" />
-</p>
+<p align="center"> <img src="https://www.google.com/search?q=https://github.com/codemaster-d/codemaster-d/blob/output/dist/github-contribution-grid-snake.svg%3Fraw%3Dtrue%26v%3D43" alt="GitHub Snake Animation" /> </p>
 

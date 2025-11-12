@@ -15,7 +15,5 @@ devOps    : ["AWS", "Docker", "GitHub Actions"],
 design    : ["Figma", "Canva", "Lottie"]
 },
 ```
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=codemaster-d&show_icons=true&theme=dark" alt="GitHub Stats" />
-</p>
+
 

@@ -1,6 +1,4 @@
-<div align="center">
-  <h3>Fullstack Web & AI Developer</h3>
-</div>
+
 
 ---
 

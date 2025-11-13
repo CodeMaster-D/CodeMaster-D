@@ -1,7 +1,3 @@
-
-
----
-
 ```javascript
 const misterD = {
 pronouns  : "He" | "Him",

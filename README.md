@@ -1,4 +1,4 @@
-```golang
+```java
 const misterD = {
 pronouns  : "He" | "Him",
 role      : "Fullstack Web Developer & AI Developer",

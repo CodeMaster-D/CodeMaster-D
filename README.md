@@ -13,4 +13,4 @@ I'm also the founder of Asep Academy, where I share knowledge and build projects
 
 ### Contact
 
-* **Email:** github.djb@gmail.com
+* **Email:** djobmisael@gmail.com
